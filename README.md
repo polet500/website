@@ -7,7 +7,7 @@ PoLet500 - Polemiche Letterarie del Cinquecento è un progetto in costruzione di
 * [Homepage](http://nuovorinascimento.org/polet500)
 * [Email](polemicheletterarie[at]gmail.com)
 * [Facebook](https://www.facebook.com/polet500/)
-* [GitHub](https://github.com/p-marco/polet500/)
+* [GitHub](https://github.com/polet500/)
 
 prova
 
