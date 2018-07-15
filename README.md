@@ -9,6 +9,3 @@ PoLet500 - Polemiche Letterarie del Cinquecento è un progetto in costruzione di
 * [Facebook](https://www.facebook.com/polet500/)
 * [GitHub](https://github.com/polet500/)
 
-prova
-
-prova prova
