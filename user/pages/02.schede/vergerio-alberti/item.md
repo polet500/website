@@ -1,9 +1,9 @@
 ---
-title:  "Fra Leandro Bolognese In un suo Libro stampato in Bologna nellanno 1550 ha tolto a celebrare per cose verissime, catholice et sante il concorso de’ popoli alla statoa et ai muri di Loretto …"
+title:  "Polemica Vergerio - Alberti"
 metadata:
 	description: La polemica, postuma, contro il best seller del genere storico-letterario Descrittione di tutta l’Italia di fra Leandro Alberti
-	og:image: http://nuovorinascimento.org/polet500/schede/{{cd}}/banner-fb.jpg
-	image: http://nuovorinascimento.org/polet500/schede/{{cd}}/banner-fb.jpg
+	og:image: http://nuovorinascimento.org/polet500/schede/vergerio-alberti/banner-fb.jpg
+	image: http://nuovorinascimento.org/polet500/schede/vergerio-alberti/banner-fb.jpg
 	keywords: polemiche letterarie, pietro bembo, letteratura cinquecento
 date: 25-06-2018
 taxonomy:
