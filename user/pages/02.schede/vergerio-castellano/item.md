@@ -11,7 +11,7 @@ taxonomy:
     tag: [Opuscolo teologico, controversia]
     char: [Pier Paolo Vergerio il giovane, fra Alberto da Castello (o Castellano), Domenico di Guzmàn, Alano della Rupe (Alain de la Roche), Juan Álvarez de Toledo y Zúñiga, Girolamo Querini, Pietro Bertani, Jacopo Giovanbattista Nacchianti, Tommaso Stella, Leonardo Marini, Ambrogio Catarino Politi, Adriano Beretti, Giulio III, Alessandro Numai, Giorgio Siculo]
     author: Vincenzo Vozza
-    date: 25/06/201825/06/2018
+    date: 25/06/2018
     chronology: 1550
     bibliography:
     -

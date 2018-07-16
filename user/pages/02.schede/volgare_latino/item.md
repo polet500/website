@@ -10,7 +10,7 @@ taxonomy:
 	category: blog
     tag: [polemiche antiquarie]
     char: [Pirro Ligorio, Lucio Fauno, Giovanni Tarcagnota, Bartolomeo Marliani, Benedetto Egio, Onofrio Panvinio, Jean Matal, Antonio Agustin, Ranunccio Farnese, Francois Rabelais, Michele Tramezino, Alessandro Farnese, Claudio Tolomei, Marcello Cervini]
-    author: 
+    author: Gennaro Tallini
     date: 15/07/2018
     chronology: 1534-1553
     bibliography:
