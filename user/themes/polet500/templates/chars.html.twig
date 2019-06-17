@@ -6,7 +6,7 @@
 {% if config.plugins.taxonomylist.enabled %}
 	<div class="card-item">
 		<h1 class="h1 uppercase u-t_sans">{{ page.title }}</h1>
-    	<p class="u-t_sans display"><strong>{{ page.content }}</strong></p>
+    	<p class="u-t_sans display"><strong class="u-t_sans">{{ page.content }}</strong></p>
     	{%  include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'char' } %}
 	</div>
 {% endif %}
