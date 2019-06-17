@@ -1,14 +1,13 @@
 
 {% embed 'default.html.twig' %}
 
-	{% set collection = page.collection() %}
 
 	{% block mainContent %}
 
-    {{ page.content }}
+        {{ page.content }}
+
+        {{ page.find('/schede/blog.md').content }}
     
-    {{ page.find('/schede/blog.md').content }}
-		
 	{% endblock %}
 
 {% endembed %}
