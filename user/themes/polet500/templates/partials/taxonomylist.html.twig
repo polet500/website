@@ -1,0 +1,16 @@
+{% set taxlist = taxonomylist.get() %}
+{% if taxlist %}
+{% set active = uri.param(taxonomy) == tax ? 'active' : '' %}
+	<ul class="menu">
+		{% for tax,value in taxlist[taxonomy] |ksort %}
+			<li>
+    			<a 	
+    				class="{{ active }}" 
+    				href="{{ site.url }}/polet500/schede/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}"
+    			>
+        			<span class="">{{ tax }}</span>
+        		</a>
+    		</li> 
+    	{% endfor %}
+	</ul>
+{% endif %}
