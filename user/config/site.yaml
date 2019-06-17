@@ -14,4 +14,3 @@ redirects:
 routes:
     /something/else: /testi/focus-and-blur
     /another/one/(.*): /testi/$1
-
