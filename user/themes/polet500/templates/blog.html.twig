@@ -1,15 +1,9 @@
-{% embed 'partials/base.html.twig' %}
+{% embed 'partials/default.html.twig' %}
 
 	{% set collection = page.collection() %}
 
-	{% block content %}
+	{% block mainContent %}
 
-	<div class="wrapper main">
-		
-		{% include "partials/nav-main.html.twig" %}
-
-    	<div class="box content">
-		<br>
 			
 			{% for child in collection %}
 				{% if child.visible!='no' %}
@@ -17,8 +11,6 @@
 			    {% endif %}
 			{% endfor %}
 
-		</div>
-	</div>
 		
 	{% endblock %}
 
