@@ -12,25 +12,25 @@
 	<div class="description">
 		<p>
 			{% if page.header.Email %}
-			<span><a href="mailto:{{ page.header.Email }}"><i class="fa fa-envelope"></i></a></span>
+			<span class="social-item"><a href="mailto:{{ page.header.Email }}"><i class="fa fa-envelope"></i></a></span>
 			{% endif %}
 
 			{% if page.header.Academia %}
-			<span><a href="{{ page.header.Academia }}"><i class="fa fa-graduation-cap"></i></a></span>
+			<span class="social-item"><a href="{{ page.header.Academia }}"><i class="fa fa-graduation-cap"></i></a></span>
 			{% endif %}
 
 			{% if page.header.Linkedin %}
-			<span><a href="{{ page.header.Linkedin }}"><i class="fa fa-linkedin"></i></a></span>
+			<span class="social-item"><a href="{{ page.header.Linkedin }}"><i class="fa fa-linkedin"></i></a></span>
 			{% endif %}
 
 			{% if page.header.Facebook %}
-			<span><a href="{{ page.header.Facebook }}"><i class="fa fa-facebook"></i></a></span>
+			<span class="social-item"><a href="{{ page.header.Facebook }}"><i class="fa fa-facebook"></i></a></span>
 			{% endif %}
 			{% if page.header.GitHub %}
-				<span><a href="{{ page.header.GitHub }}"><i class="fa fa-github"></i></a></span>
+				<span class="social-item"><a href="{{ page.header.GitHub }}"><i class="fa fa-github"></i></a></span>
 			{% endif %}
 			{% if page.header.Homepage %}
-				<span><a href="{{ page.header.Homepage }}"><i class="fa fa-globe"></i></a></span>
+				<span class="social-item"><a href="{{ page.header.Homepage }}"><i class="fa fa-globe"></i></a></span>
 			{% endif %}
 		</p>
 	</div>						
