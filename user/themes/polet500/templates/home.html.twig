@@ -1,5 +1,17 @@
-{% extends 'partials/base.html.twig' %}
 
-{% block content %}
-<h1> PAGINA DI PROVA </h1>
-{% endblock %}
+{% embed 'default.html.twig' %}
+
+	{% set collection = page.collection() %}
+
+	{% block mainContent %}
+
+    {{ page.content }}
+    
+    {{ page.find('/schede/blog.md').content }}
+		
+	{% endblock %}
+
+{% endembed %}
+
+
+
