@@ -1,6 +1,6 @@
-<div class="card-item wrapper">
-	<div class="box sidebar">
-		<div class="bg-cover avatar-64 round" style=" background-color:#ccc; width:64px; height:64px; border-radius:50%; border: solid 2px #eee  background-image: url('{{ page.url }}/{{ page.header.Image }}');  ">
+<div class="card-item wrapper" style="border: 2px solid #eee; {% if page.header.Color %} background: {{ page.header.Color }} {% else %} background: #4caf50 {% endif %}">
+	<div class="box sidebar" style="text-align:right">
+		<div class="bg-cover avatar-64 round" style=" background-color:#ccc; width:64px; height:64px; border-radius:50%; border: solid 2px #eee;  background-image: url('{{ page.url }}/{{ page.header.Image }}');  background-size: cover">
 		</div>	
 	</div>
 	<div class="box content">
@@ -36,9 +36,8 @@
 	</div>						
 	<div class="callTo">
 		{% if not (page.header.Schede) %}
-	    <p class="u-t_sans uppercase"><a href="{{ site.url }}/polet500/schede/author:{{ page.header.Name }}">Consulta le schede</a></p>
+	    <p class="u-t_sans uppercase"><a href="{{ site.url }}/schede/author:{{ page.header.Name }}">Consulta le schede</a></p>
 		{% endif %}
 	</div>						
 	</div>
-	<div class="border" style="{% if page.header.Color %} background: {{ page.header.Color }} {% else %} background: #4caf50 {% endif %}"></div>					
 </div>
