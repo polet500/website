@@ -1,0 +1,21 @@
+        {% endfor %}
+{% embed 'default.html.twig' %}
+
+	{% set collection = page.collection() %}
+
+	{% block mainContent %}
+
+			
+			{% for child in collection %}
+				{% if child.visible!='no' %}
+					{% include 'partials/contributor.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+			    {% endif %}
+			{% endfor %}
+
+		
+	{% endblock %}
+
+{% endembed %}
+
+
+

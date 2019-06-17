@@ -1,0 +1,43 @@
+<div class="card-item wrapper" style="border-bottom: 2px solid #eee; {% if page.header.Color %} border-color: {{ page.header.Color }} {% else %} border-color: #4caf50 {% endif %}">
+	<div class="box sidebar" style="text-align:right">
+		<div class="bg-cover avatar-64 round" style=" background-color:#ccc; width:64px; height:64px; border-radius:50%; border: solid 2px #eee;  background-image: url('{{ page.url }}/{{ page.header.Image }}');  background-size: cover">
+		</div>	
+	</div>
+	<div class="box content">
+    <div class="title">
+		<h2 class="h2 u-t_sans">{{ page.header.Name }}</h2>										
+		<p><span class="u-t_sans">{{ page.header.University}}</span><br>
+		<strong class="u-t_sans">{{ page.header.Role }}</strong></p>
+	</div>						
+	<div class="description">
+		<p>
+			{% if page.header.Email %}
+			<span><a href="mailto:{{ page.header.Email }}"><i class="fa fa-envelope"></i></a></span>
+			{% endif %}
+
+			{% if page.header.Academia %}
+			<span><a href="{{ page.header.Academia }}"><i class="fa fa-graduation-cap"></i></a></span>
+			{% endif %}
+
+			{% if page.header.Linkedin %}
+			<span><a href="{{ page.header.Linkedin }}"><i class="fa fa-linkedin"></i></a></span>
+			{% endif %}
+
+			{% if page.header.Facebook %}
+			<span><a href="{{ page.header.Facebook }}"><i class="fa fa-facebook"></i></a></span>
+			{% endif %}
+			{% if page.header.GitHub %}
+				<span><a href="{{ page.header.GitHub }}"><i class="fa fa-github"></i></a></span>
+			{% endif %}
+			{% if page.header.Homepage %}
+				<span><a href="{{ page.header.Homepage }}"><i class="fa fa-globe"></i></a></span>
+			{% endif %}
+		</p>
+	</div>						
+	<div class="callTo">
+		{% if not (page.header.Schede) %}
+	    <p class="u-t_sans uppercase"><a href="{{ site.url }}/schede/author:{{ page.header.Name }}">Consulta le schede</a></p>
+		{% endif %}
+	</div>						
+	</div>
+</div>
