@@ -13,22 +13,7 @@
 			
 			{% for child in collection %}
 				{% if child.visible!='no' %}
-					<div class="card-item">
-						<div class="title">
-							<h2 class="h2 u-t_sans">
-								<a href="{{ page.url }}">{{ page.title }}</a>
-							</h2>										
-							<p><span class="u-t_sans">{{ page.header.taxonomy.author }}|{{ page.header.taxonomy.date }}</span><br>
-							<span class="h2 u-t_sans">{{ page.header.taxonomy.chronology }}</span></p>
-						</div>						
-						<div class="description">
-							<p>{{ page.header.metadata.description }}</p>
-						</div>						
-						<div class="callTo">
-							<p class="u-t_sans uppercase"><a href="{{ page.url }}">Leggi</a></p>
-						</div>						
-						<div class="border"></div>					
-					</div>	
+					{% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
 			    {% endif %}
 			{% endfor %}
 
