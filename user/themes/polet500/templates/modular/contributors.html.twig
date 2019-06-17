@@ -1,10 +1,5 @@
-{% embed 'default.html.twig' %}
 
-	{% block mainContent %}
         {% for module in page.collection() %}
             <div id="{{ _self.pageLinkName(module.menu) }}"></div>
             {{ module.content }}
         {% endfor %}
-    
-    {% endblock %}
-
