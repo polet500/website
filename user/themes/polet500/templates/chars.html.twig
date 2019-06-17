@@ -1,17 +1,15 @@
-
 {% embed 'default.html.twig' %}
 	{% block mainContent %}
 		{% set new_base_url = site.blog.route== '/' ? '' : blog.url %}
 
 
 {% if config.plugins.taxonomylist.enabled %}
-	<h1 class="h1 uppercase u-t_sans">{{ page.title }}</h1>
-    <p class="u-t_sans display"><strong>{{ page.content }}</strong></p>
-    {%  include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'char' } %}
+	<div class="card-item">
+		<h1 class="h1 uppercase u-t_sans">{{ page.title }}</h1>
+    	<p class="u-t_sans display"><strong>{{ page.content }}</strong></p>
+    	{%  include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'char' } %}
+	</div>
 {% endif %}
 
 {% endblock %}
 {% endembed %}
-
-
-

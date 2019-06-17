@@ -1,15 +1,14 @@
-	{% set new_base_url = blog.url == '/' ? '' : blog.url %}
+{% embed 'default.html.twig' %}
+	{% block mainContent %}
+		{% set new_base_url = site.blog.route== '/' ? '' : blog.url %}
 
-{% embed 'partials/base.html.twig' %}
-	{% block content %}
 
 {% if config.plugins.taxonomylist.enabled %}
-<div class="content-wrapper" style="max-width:920px; margin:0 auto">
-<h1 style="text-align:left">{{ page.title }}</h1>
-
-    <h4>{{ page.content }}</h4>
-    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', filter: true, filterstart: 0, filterend: 5, sort:true} %}
-</div>
+	<div class="card-item">
+		<h1 class="h1 uppercase u-t_sans">{{ page.title }}</h1>
+    	<p class="u-t_sans display"><strong>{{ page.content }}</strong></p>
+    	{%  include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', filter: true, filterstart: 0, filterend: 5, sort:true}  %}
+	</div>
 {% endif %}
 
 {% endblock %}
