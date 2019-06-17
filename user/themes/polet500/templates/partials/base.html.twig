@@ -29,6 +29,8 @@
 <!--STYLES-->
 {% block stylesheets %}
         {% do assets.addCss('theme://css/style.css') %}
+        {% do assets.addCss('theme://css/font-awesome.min.css', 100) %}
+
         
 {% endblock %}
     {{ assets.css() }}
