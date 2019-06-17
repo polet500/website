@@ -11,9 +11,7 @@ content:
         by: default
         dir: asc
         custom:
-        -  _impressum
         -  _contributors
         -  _presentazione
-        -  _partners
         
 ---
