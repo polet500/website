@@ -1,7 +1,7 @@
 ---
 Date: 02/02/2017 11.20.44
 Name: Antonello Fabio Caterino
-Role: Coordinatore <br>scientifico
+Role: Coordinatore Scientifico
 Image: profile_caterino.jpg
 Email: antonello.caterino@unimol.it
 Homepage: 

@@ -1,7 +1,7 @@
 ---
 Date: 01/02/2017 13.40.46
 Name: Marco Petolicchio
-Role: Responsabile <br>tecnico-informatico
+Role: Responsabile Tecnico-Informatico
 Image: profile_petolicchio.jpg
 Email: marco.petolicchio@gmail.com
 Homepage: 

@@ -1,7 +1,7 @@
 ---
 Date: 22/03/2017 12.03.19
 Name: Marcello Bolpagni
-Role: Vicecoordinatore <br>scientifico
+Role: Vicecoordinatore Scientifico
 Image: profile_bolpagni.jpg
 Email: marcello.bolpagni@gmail.com
 Homepage: 
