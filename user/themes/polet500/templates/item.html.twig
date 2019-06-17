@@ -1,85 +1,96 @@
 {% embed 'partials/base.html.twig' %}
 
-	{% block content %}
-	{% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
+{% block content %}
+{% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 
-	<div class="blog-content-item content-wrapper content-focus">
+<div class="wrapper main">
+	<div class="box sidebar wrapper u-p_r--2 u-bg--lg">
+        <div class="box sidebar">
+            <div style="text-align:right; padding-top: 1rem"><img src="http://polet500.it/assets/img/favicon.png" style="height:36px; width:36px"></div>
+        </div>
+
+		<div class="box content">
+			<h1 class="h1 u-t_sans">{{ page.header.title }}</h1>
+			<p class="u-t_sans"> {{ page.header.taxonomy.author }} | {{page.header.date}}</p>
+							
+			<h2 class="h2 u-t_sans">{{ page.header.taxonomy.chronology }}</h2>
+
+			<p class="display">{{ page.header.metadata.description }}</p>
 			
+			<br><br><br>
+			<ul class="menu">
+				<h2 class="h2 uppercase u-t_sans">
+					Argomenti 
+					<span class="label">{{ page.header.taxonomy.tag | length }}</span>
+				</h2>
+				{% for tag in page.taxonomy.tag  %}
+					<li class="u-t_sans">
+						<a href="{{ site.url }}/schede/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+					</li>
+				{% endfor %}
+			</ul>		
+			
+			<br><br>
 
-				<!--{% for tag in page.taxonomy.tag %}
-            <span class="tags">
-                <a href="{{ new_base_url|rtrim('/') }}/char{{ config.system.param_sep }}{{ tag }}" class="p-category">
-                <span class="">{{ tag }}</span>
-                </a>
-            </span>
-            {% endfor %}-->
+			<ul class="menu">	
+				<h2 class="h2 uppercase u-t_sans">
+					Personaggi 
+					<span class="label">{{ page.header.taxonomy.char | length }}</span>
+				</h2>
+				{% for char in page.taxonomy.char  %}
+					<li class="u-t_sans">
+						<a href="{{ site.url }}/schede/char{{ config.system.param_sep }}{{ char }}">{{ char }}</a>
+					</li>
+				{% endfor %}
+			</ul>	
+			
+			<br><br>
+
+			<ul class="menu">	
+				<h2 class="h2 uppercase u-t_sans">
+					Riferimenti 
+					<span class="label">{{ page.header.taxonomy.bibliography | length }}</span>
+				</h2>
+				{% for bibliography in page.taxonomy.bibliography |sort %}
+
+					<li class="small u-t_sans">
+						<span class="uppercase"> {{ bibliography.Autore }} ({{ bibliography.Data }})</span>, 
+						<span><em>{{ bibliography.Titolo }}</em>.</span>
+						
+						{% if bibliography.Volume %}
+							in 
+							<span class="text-em"> {{ bibliography.Volume }}</span>;
+						{% endif %}
+						
+						<span class="">{{ bibliography.Editore }}</span>,
+						<span class="">{{ bibliography.Luogo }}</span> 
+						{% if bibliography.Pagine %}
+						,
+							<span class="text-lowercase">pp. {{ bibliography.Pagine }}</span> 
+						{% endif %}
+
+						{% if bibliography.Link %}
+							<a href="{{ bibliography.Link }}" target="_blank">
+								<i class="fa fa-external-link" aria-hidden="true"></i>
+							</a>
+						{% endif %}
+					
+					</li>
+				{% endfor %}
+			</ul>
+		</div>  
+	</div>               
 
 
-			    {% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false} %}
-			</div>
+	<div class="box content">
+    	<div class="card-item box entry-detailed display">
+			{{ page.content }}
 		</div>
-<br>
-<div class="content-wrapper content-focus" style=" font-family:'Quattrocento';" id="credits">
-
-	<h5>Citare la voce</h5>
-	<blockquote>
-	<strong>{{ page.header.taxonomy.author }} ({{page.header.date}})</strong>.<br> 
-	{{ page.header.title }}. <em>PoLet500 - Polemiche Letterarie del Cinquecento</em>. Firenze, Edizioni CLORI, 2016-in corso. <br>
-	ISBN: 978-88-942416-8-6; DOI: <a href="https://doi.org/10.5281/zenodo.881970" target="_blank">10.5281/zenodo.881970</a>.<br>
-	Documento rilasciato con licenza  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-	</blockquote>
-	<p>
-	<span class="tags"><a href="{{ page.url }}.json">Esporta scheda JSON</a></span>
-	<!--<span class="tags"><a href="#">Esporta citazione Bib </a></span>-->
-	<span class="tags"><a href="{{ site.url }}/polet500/schede/author:{{ page.taxonomy.author.0 }}">Vedi le altre schede dell'autore </a></span>
-	</p>
-</div>
-<br>
-<div class="content-wrapper table-container" style="max-width:920px; margin:0 auto">
-	<div class="table-col" style="text-align:center" id="tagList">
-		<div class="avatar-184" style="background-image: url('{{ base_url }}/assets/img/tags.jpg'); "></div>
-    	<h4>{{ 'Argomenti'|t }}</h4>
-		<div style="width:90%; margin:0 auto; background: #4caf50; height:2px"></div><br>
-		<div style="width:90%; margin:0 auto;">
-    	{% for tag in page.taxonomy.tag  %}
-            <span class="tags">
-                <a href="{{ site.url }}/polet500/schede/tag{{ config.system.param_sep }}{{ tag }}" class="p-category">
-               		<span class="">{{ tag }}</span>
-                </a>
-            </span>
-        {% endfor %}
-	</div>
-	</div>
-	<div class="table-col" style="text-align:center" id="charList">
-		<div class="avatar-184" style=" background-image: url('{{ base_url }}/assets/img/char.jpg');"></div>
-    	<h4>{{ 'Personaggi'|t }}</h4>
-		<div style="width:90%; margin:0 auto; background: #4caf50; height:2px"></div><br>
-		<div style="width:90%; margin:0 auto; ">
-    	{% for char in page.taxonomy.char  %}
-            <span class="tags">
-                <a href="{{ site.url }}/polet500/schede/char{{ config.system.param_sep }}{{ char }}" class="p-category">
-               		<span class="">{{ char }}</span>
-                </a>
-            </span>
-        {% endfor %}
-	</div>
 	</div>
 </div>
-</div>
-</div>
-<br>
-<div id="refList">
-    {% include "partials/bibliography_table.html.twig" %}
-</div>
-<br>
-
- 
-
-		{% include "blog_utils.html.twig" %}
-		{% include "partials/navigation_secundary.html.twig" %}
 
 
-	{% endblock %}
+{% endblock %}
 
 {% endembed %}

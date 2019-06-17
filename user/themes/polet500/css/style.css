@@ -1,0 +1,183 @@
+body,html {
+    margin: 0;
+    height:100%;
+    width:100%;
+    font-size: 0.875rem;
+}
+  
+.sidebar {
+    grid-area: sidebar;
+}
+  
+.content {
+    grid-area: content;
+}
+.header {
+    grid-area: header;
+}
+.footer {
+    grid-area: footer;
+}
+  
+.wrapper {
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas: 
+        "sidebar" 
+        "content" 
+        "footer";
+    background-color: #fff;
+    color: #444;
+}
+
+@media (min-width: 46rem) {
+    .wrapper {
+        grid-template-columns: 35% 65% ;
+        grid-template-areas: 
+            "sidebar content content";
+    }
+}
+
+
+
+.box {
+    padding: 1em;
+}
+
+.u-bg--lg{
+    box-shadow: 0 2px 20px #eee;
+}
+  
+.footer {
+    background-color: #999;
+}
+
+.uppercase{
+    text-transform: uppercase
+}
+
+.u-p_r--2{
+    padding-right:2em;
+}
+
+*{
+    font-family: "Quattrocento", serif;
+}
+.u-t_sans,
+.u-t_sans *{
+    font-family:"Montserrat", sans-serif;
+}
+
+ul{
+    margin:0; 
+    list-style-type:none;
+    padding:0;
+}
+
+ul.menu{
+    line-height:2;
+}
+
+p{
+    line-height:1.5;
+
+}
+
+.main {
+    height:100%;
+}
+
+
+h2, .h2{
+    font-size: 1.5em;
+}
+
+
+.card-item{
+    max-width:40em; 
+    margin:0 auto
+}
+
+.box-30 {
+    width:30%;
+    display:inline-block
+}
+
+.border{
+    width:100%;
+    height:2px;
+    background: #eee;
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+
+.header {
+    padding: 0
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+
+p.display{
+    font-size: 1.15rem;
+}
+
+.small {
+    font-size: 0.75rem
+}
+
+p + p {
+    margin-top:2em;
+    margin-bottom:1em
+}
+
+body:before{
+    display:block;
+    content:" ";
+    height:100%;
+    z-index:10;
+    background:#f2f2f2;
+    -webkit-animation-name: fade; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    position: absolute;
+    right:0;
+    top:0
+}
+
+@-webkit-keyframes fade {
+    from {width: 100%;}
+    to {width: 0;}
+  }
+
+.header {
+    height: 3rem;
+}
+
+
+
+.entry-detailed p:first-child:first-letter {
+    color: #903;
+    float: left;
+    font-family: inherit;
+    font-size: 3.25em;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+
+  .small + .small {
+      margin-top: 1em; 
+  }
+
+  .sidebar-main {
+    position: -webkit-sticky; /* Safari */
+    position: sticky !important ;
+    top: 0;  
+}
+
+
+.label{color:#888; margin-left:2em; font-weight: normal}
