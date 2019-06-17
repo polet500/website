@@ -1,7 +1,7 @@
 {% set taxlist = taxonomylist.get() %}
 {% if taxlist %}
 {% set active = uri.param(taxonomy) == tax ? 'active' : '' %}
-	<ul class="menu">
+	<ul class="menu u-t_sans">
 		{% for tax,value in taxlist[taxonomy] |ksort %}
 			<li>
     			<a 	

@@ -5,8 +5,8 @@
 
 
 {% if config.plugins.taxonomylist.enabled %}
-	<h1 class="h1 u-t-sans">{{ page.title }}</h1>
-    <p class="u-t-sans display">{{ page.content }}</p>
+	<h1 class="h1 uppercase u-t_sans">{{ page.title }}</h1>
+    <p class="u-t_sans display"><strong>{{ page.content }}</strong></p>
     {%  include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'char' } %}
 {% endif %}
 
