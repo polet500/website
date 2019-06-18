@@ -192,6 +192,22 @@ body:before{
 
 
 
+ul.menu + ul.menu{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.box .menu:first-of-type{
+    margin-top:6em;
+}
+
+div.social{
+    margin-top:6em
+}
+
+
+
+
 @media (max-width: 46rem) {
     ul.menu {
         display: inline-block;
@@ -208,7 +224,7 @@ body:before{
         display: none;
         transition: all 0.2s;
     }
-    ul.menu:focus > li {
+    ul.menu:hover > li {
         height: auto;
         display: block
     }
@@ -218,11 +234,3 @@ body:before{
     }
 }
 
-ul.menu + ul.menu{
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-
-div.social{
-    margin-top:3em
-}
