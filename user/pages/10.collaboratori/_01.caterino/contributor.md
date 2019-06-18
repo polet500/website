@@ -10,7 +10,7 @@ Linkedin: https://www.linkedin.com/in/antonellofabiocaterino
 Academia: https://unina2.academia.edu/AntonelloFabioCaterino
 GooglePlus: 
 GitHub: 
-University: "Università degli Studi del Molise / Università degli Studi della Campania 'Luigi Vanvitelli'" 
+University: "Università degli Studi del Molise" 
 Twitter: 
 Color: "#ff6600"
 ---

@@ -1,7 +1,7 @@
 ---
 Date: 09/12/2017 10.50.25
 Name: Elena Bilancia
-Role: Collaboratore
+Role: Vicecoordinatore Scientifico
 Image: 
 Email: bilanciaelena@gmail.com
 Homepage: 

@@ -4,7 +4,7 @@ Name: Marco Petolicchio
 Role: Responsabile Tecnico-Informatico
 Image: profile_petolicchio.jpg
 Email: marco.petolicchio@gmail.com
-Homepage: 
+Homepage: http://marcopetolicchio.com
 Facebook: http://facebook.com/PetolicchioMarco
 Linkedin: http://linkedin.com/in/marcopetolicchio
 Academia: http://independent.academia.edu/MarcoPetolicchio
