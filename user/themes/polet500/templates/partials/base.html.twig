@@ -43,12 +43,12 @@
 
 
 
-<body id="top" class="{{ page.header.body_classes ?: 'modular header-image fullwidth' }}">
+<body id="top">
 
 {% block body %}
 {% block content %}{% endblock %}
 {% endblock %}
 
-        
+{% include "partials/footer.html.twig" %}        
 </body>
 </html>
