@@ -18,8 +18,7 @@
 
 			<p class="display">{{ page.header.metadata.description }}</p>
 			
-			<br><br><br>
-			<ul class="menu">
+			<ul class="menu" tabindex="0">
 				<h2 class="h2 uppercase u-t_sans">
 					Argomenti 
 					<span class="label">{{ page.header.taxonomy.tag | length }}</span>
@@ -31,9 +30,8 @@
 				{% endfor %}
 			</ul>		
 			
-			<br><br>
 
-			<ul class="menu">	
+			<ul class="menu" tabindex="0">	
 				<h2 class="h2 uppercase u-t_sans">
 					Personaggi 
 					<span class="label">{{ page.header.taxonomy.char | length }}</span>
@@ -45,9 +43,8 @@
 				{% endfor %}
 			</ul>	
 			
-			<br><br>
 
-			<ul class="menu">	
+			<ul class="menu" tabindex="0">	
 				<h2 class="h2 uppercase u-t_sans">
 					Riferimenti 
 					<span class="label">{{ page.header.taxonomy.bibliography | length }}</span>

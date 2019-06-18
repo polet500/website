@@ -189,3 +189,40 @@ body:before{
 .social-item:first-of-type{
     margin-left:0;
 }
+
+
+
+@media (max-width: 46rem) {
+    ul.menu {
+        display: inline-block;
+        margin: 1em;
+    }
+
+    ul.menu h2::before{
+        display: inline-block;
+        content: "+";
+    }
+
+    ul.menu > li{
+        height: 0;
+        display: none;
+        transition: all 0.2s;
+    }
+    ul.menu:focus > li {
+        height: auto;
+        display: block
+    }
+    ul.menu + ul.menu, div.social{
+        margin-top: 1em;
+        margin-bottom: 1em
+    }
+}
+
+ul.menu + ul.menu{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+div.social{
+    margin-top:3em
+}
