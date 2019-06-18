@@ -88,15 +88,23 @@
 			<h2 class="h2 u-t_sans uppercase">Condividi</h2>
 			
 			<p class="display" style="color:#666">
-			{% include 'partials/socialbuttons.html.twig' with {'url' : page.url} %}
-		    <span class="social-item"><a href="http://facebook.com/polet500"><i class="fa fa-facebook"></i></a></span>
-		    <span class="social-item"><a href="http://twitter.com/polet500"><i class="fa fa-twitter"></i></a></span>
-			
-			<span class="social-item"><a href="http://github.com/polet500"><i class="fa fa-github"></i></a></span>
-			
-            <span class="social-item"><a href="{{ base_url_absolute }}:1080/schede/.rss"><i class="fa fa-feed"></i></a></span>
-			
-			<span class="social-item"><a href="https://play.google.com/store/apps/details?id=appinventor.ai_antonello_f_caterino.PoLet500&amp;hl=en" target="_blank"><i class="fa fa-android"></i></a></span>
+				<span class="social-item">
+				<a href="mailto:?subject=Check%20out%20this%20awesome%20resource&amp;body={{ page_url }}">
+					<i class="fa fa-envelope"></i>
+				</a>
+				</span>
+
+				<span class="social-item">
+					<a href="https://www.facebook.com/sharer/sharer.php?u={{ page_url }}" class="popup">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</span>
+
+				<span class="social-item">
+				<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ page_url }}" class="popup">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				</span>
 
             <span class="social-item"><a href="{{ base_url_absolute }}:1080/sitemap"><i class="fa fa-sitemap"></i></a></span>
 		</p>
@@ -105,15 +113,15 @@
 		<div class="card-item box">
 			<h2 class="h2 u-t_sans uppercase">Citare la voce</h2>
 			
-			<blockquote class="u-t_sans">
+			<p class="u-t_sans">
 			<span class="uppercase"><a href="{{ site.url }}/schede/author:{{ 		page.taxonomy.author.0 }}">{{ page.header.taxonomy.author }}</a> ({{ page.header.date }})</span><br> 
 			<em>{{ page.header.title }} </em>. 
-			{{ site.journal.title }}
-			{{ site.journal.publisher.place }}, {{ site.journal.publisher.name }}
+			{{ site.journal.title }}.
+			{{ site.journal.publisher.place }}, {{ site.journal.publisher.name }}.
 			ISBN: {{ site.journal.isbn }}; 
 			DOI: {{ site.journal.doi }}. <br>
 			Documento rilasciato con licenza {{ site.journal.license }}.
-			</blockquote>
+			</p>
 		</div>
 	</div>
 </div>
