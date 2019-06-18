@@ -14,3 +14,11 @@ redirects:
 routes:
     /something/else: /testi/focus-and-blur
     /another/one/(.*): /testi/$1
+journal:
+    title: 'Polet500 - Polemiche Letterarie del Cinquecento'
+    publisher:
+        name: 'Al segno di Fileta'
+        place: 'Ururi'
+    isbn: "9788832173000"
+    doi: "10.5281/zenodo.881970"
+    license: "Creative Commons Attribution 4.0 International License"
