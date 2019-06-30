@@ -7,7 +7,7 @@ blog:
 metadata:
     title: 'PoLet500 - Polemiche Letterarie del 500'
     description: 'PoLet500 è un progetto in costruzione di schedatura telematica di polemiche letterarie del Cinquecento italiano'
-    headline: 'Con la partnership del Dipartimento di lingua e letteratura italiana, Facolta di Studi Umanistici e Sociali, Università di Spalato'
+    headline: 'Col patrocinio della Regione Molise e con la partnership del Dipartimento di lingua e letteratura italiana, Facoltà di Studi Umanistici e Sociali, Università di Spalato'
 taxonomies: [category,tag,month,char,author,chronology]
 redirects:
     /changelog: /testi/the-urban-jungle
